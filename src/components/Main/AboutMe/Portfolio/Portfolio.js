@@ -12,7 +12,7 @@ function Portfolio() {
                         rel="noreferrer"
                         target="_blank">
                         <p className="portfolio__link-name link">Статичный сайт</p>
-                        <span className='portfolio__link-span'>↗</span>
+                        <span className='portfolio__link-span link'>↗</span>
                     </a>
                 </li>
                 <li>
@@ -22,7 +22,7 @@ function Portfolio() {
                         rel="noreferrer"
                         target="_blank">
                         <p className="portfolio__link-name link">Адаптивный сайт</p>
-                        <span className='portfolio__link-span'>↗</span>
+                        <span className='portfolio__link-span link'>↗</span>
                     </a>
                 </li>
                 <li>
@@ -32,7 +32,7 @@ function Portfolio() {
                         rel="noreferrer"
                         target="_blank">
                         <p className="portfolio__link-name link">Одностраничное приложение</p>
-                        <span className='portfolio__link-span'>↗</span>
+                        <span className='portfolio__link-span link'>↗</span>
                     </a>
                 </li>
             </ul>

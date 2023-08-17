@@ -50,6 +50,11 @@
     margin: 0;
 }
 
+.movies-card__delete-favorites-btn:hover {
+    transition: .3;
+    opacity: .7;
+}
+
 .movies-card__add-favorites-btn {
     background-image: url("../../images/add-favorites-btn.svg");
     background-repeat: no-repeat;

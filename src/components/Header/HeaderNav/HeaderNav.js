@@ -11,7 +11,7 @@ function HeaderNav() {
                         to="/movies"
                         className={({ isActive }) => isActive
                             ? "header-nav__link header-nav__link_active link"
-                            : "header-nav__link"}>
+                            : "header-nav__link link"}>
                         Фильмы
                     </NavLink>
                 </li>
@@ -19,8 +19,8 @@ function HeaderNav() {
                     <NavLink
                         to="/saved-movies"
                         className={({ isActive }) => isActive
-                            ? "header-nav__link header-nav__link_active"
-                            : "header-nav__link link"}>
+                            ? "header-nav__link header-nav__link_active link"
+                            : "header-nav__link link link"}>
                         Сохранённые фильмы
                     </NavLink>
                 </li>

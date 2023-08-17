@@ -15,7 +15,7 @@ const MoviesCard = ({ card, flag }) => {
     };
 
     return (
-        <li className="movies-card__card">
+        <li className="movies-card">
             <div className="movies-card__info">
                 <div className="movies-card__info-container">
                     <h2 className="movies-card__title">{card.name}</h2>
@@ -23,7 +23,7 @@ const MoviesCard = ({ card, flag }) => {
                 </div>
                 <button
                     className={`movies-card__${flag} movies-card__${flag}_${saveMovie
-                            ? "active"
+                            ? "active button"
                             : ""
                         }`}
                     onClick={handleSaveMovie}

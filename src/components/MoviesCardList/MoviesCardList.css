@@ -1,6 +1,5 @@
 .movies-card-list__container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
     justify-content: center;
     margin: 80px 70px 30px;
     grid-auto-flow: dense;

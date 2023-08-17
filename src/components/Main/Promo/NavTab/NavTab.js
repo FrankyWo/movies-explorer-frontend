@@ -9,7 +9,7 @@ function NavTab() {
                 to='about-project'
                 smooth={true}
                 duration={700}
-                className='nav-tab__link nav-tab__button'>
+                className='nav-tab__button button'>
                 О проекте
             </Link>
 
@@ -17,7 +17,7 @@ function NavTab() {
                 to='tech'
                 smooth={true}
                 duration={700}
-                className='nav-tab__link nav-tab__button'>
+                className='nav-tab__button button'>
                 Технологии
             </Link>
 
@@ -25,7 +25,7 @@ function NavTab() {
                 to='about-me'
                 smooth={true}
                 duration={700}
-                className='nav-tab__link nav-tab__button'>
+                className='nav-tab__button button'>
                 Студент
             </Link>
         </nav>

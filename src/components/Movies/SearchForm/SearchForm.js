@@ -9,7 +9,7 @@ function SearchForm() {
             <form className="search__form">
                 <div className="search__container">
                     <img
-                        className="search__search-image search__search-image-none"
+                        className="search__icon"
                         src={search}
                         alt="поиск"
                     />
@@ -17,7 +17,7 @@ function SearchForm() {
                         className="search__input"
                         placeholder="Фильм"
                         type="text"
-                        minLength="2"
+                        minLength="3"
                         maxLength="30"
                         required
                     />
@@ -25,7 +25,7 @@ function SearchForm() {
                         type="submit"
                         className="search__button button">
                         <img
-                            className="search__search-image"
+                            className="search__icon"
                             src={searchBtn}
                             alt="поиск"
                         />

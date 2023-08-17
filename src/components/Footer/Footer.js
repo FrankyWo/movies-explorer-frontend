@@ -4,7 +4,7 @@ import "./Footer.css";
 function Footer() {
     return (
         <footer className='footer'>
-            <h2 className='footer__title'>Учебный проект Яндекс.Практикум х BeatFilm.</h2>
+            <h1 className='footer__title'>Учебный проект Яндекс.Практикум х BeatFilm.</h1>
             <div className="footer__container">
                 <p className='footer__copy'>&copy; 2023</p>
                 <nav className="footer__links-nav">

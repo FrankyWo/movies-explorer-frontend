@@ -8,21 +8,11 @@
     display: flex;
 }
 
-.nav-tab__link {
-    margin-right: 10px;
-}
-
-.nav-tab__link:last-of-type {
-    margin-right: 0;
-}
-
 .nav-tab__button {
     background-color: #303030;
-    color: #fff;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    text-align: center;
     line-height: 16px;
     font-weight: 500;
     min-height: 36px;
@@ -32,11 +22,11 @@
     display: flex;
     border: none;
     padding: 0;
+    margin-right: 10px;
 }
 
-.nav-tab__button:hover {
-    transition: 1s ease-in;
-    opacity: 0.6;
+.nav-tab__button:last-of-type {
+    margin-right: 0;
 }
 
 @media screen and (max-width: 768px) {

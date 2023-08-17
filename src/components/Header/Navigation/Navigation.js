@@ -15,7 +15,7 @@ function Navigation(props) {
                     className="navigation__close"
                     type="button"
                     onClick={props.onClick}>
-                    <img className="navigation__close-img" src={close} alt="закрыть" />
+                    <img className="navigation__close-img button" src={close} alt="закрыть" />
                 </button>
                 <nav>
                     <ul className="navigation__links">
@@ -24,8 +24,8 @@ function Navigation(props) {
                                 to="/"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? "navigation__link navigation__link_active"
-                                        : "navigation__link"
+                                        ? "navigation__link navigation__link_active link"
+                                        : "navigation__link link"
                                 }>
                                 Главная
                             </NavLink>
@@ -35,8 +35,8 @@ function Navigation(props) {
                                 to="/movies"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? "navigation__link navigation__link_active"
-                                        : "navigation__link"
+                                        ? "navigation__link navigation__link_active link"
+                                        : "navigation__link link"
                                 }>
                                 Фильмы
                             </NavLink>
@@ -46,8 +46,8 @@ function Navigation(props) {
                                 to="/saved-movies"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? "navigation__link navigation__link_active"
-                                        : "navigation__link"
+                                        ? "navigation__link navigation__link_active link"
+                                        : "navigation__link link"
                                 }>
                                 Сохранённые фильмы
                             </NavLink>

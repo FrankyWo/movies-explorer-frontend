@@ -11,7 +11,7 @@ function NotFoundPage() {
                     className="not-found-page__link"
                     href="/signin">
                     <button
-                        className="not-found-page__link-button"
+                        className="not-found-page__link-button button"
                         type="button">
                         Назад
                     </button>

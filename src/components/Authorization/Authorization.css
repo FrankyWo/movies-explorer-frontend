@@ -114,8 +114,14 @@
     margin-top: 203px;
 }
 
+.authorization__confirm-button_disable {
+    background: #312f2f;
+    color: #ece1e1;
+    cursor: auto;
+}
+
 .authorization__confirm-container {
-    margin: 16px auto 70px auto;
+    margin: 16px auto 70px;
     justify-content: flex-start;
     flex-direction: row;
     min-height: 17px;
@@ -132,7 +138,7 @@
 
 .authorization__confirm-link {
     text-decoration: none;
-    margin: 0 0 0 6px;
+    margin-left: 6px;
     line-height: 17px;
     font-weight: 400;
     font-size: 14px;

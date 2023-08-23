@@ -52,6 +52,10 @@
     width: 100%;
 }
 
+.search__input::placeholder {
+    color: #A0A0A0;
+}
+
 .search__button {
     background: #2F2F2F;
     padding: 5px 3px 3px 2px;
@@ -71,8 +75,13 @@
     width: 36px;
 }
 
-.search__checkbox {
-    display: none;
+.search__slider {
+    background-color: #3DDC84;
+    transform: scale(-1, -1);
+    border-radius: 16px;
+    position: absolute;
+    transition: 0.6s;
+    inset: 0;
 }
 
 .search__slider::before {
@@ -88,6 +97,10 @@
     transition: 0.3s;
 }
 
+.search__checkbox {
+    display: none;
+}
+
 .search__checkbox:checked+.search__slider {
     background-color: #fff;
 }
@@ -96,16 +109,7 @@
     transform: translateX(16px);
 }
 
-.search__slider {
-    background-color: #3DDC84;
-    transform: scale(-1, -1);
-    border-radius: 16px;
-    position: absolute;
-    transition: 0.6s;
-    inset: 0;
-}
-
-.search__icon {
+.search__search-image {
     margin-left: 19px;
     height: 34px;
     width: 34px;
@@ -113,15 +117,15 @@
 }
 
 @media screen and (max-width: 768px) {
+    .search__container {
+        width: 100%;
+        margin: 0;
+    }
+
     .search {
         flex-direction: column;
         padding: 80px 0 108px;
         margin: 0 30px 0;
-    }
-
-    .search__container {
-        width: 100%;
-        margin: 0;
     }
 
     .search__border {
@@ -155,6 +159,21 @@
         width: 100%;
     }
 
+    .search__button {
+        margin-right: 20px;
+    }
+
+    .search__toggle {
+        display: none;
+    }
+
+    .search__toggle_mini-size {
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 0 0;
+        display: flex;
+    }
+
     .search__input {
         padding: 0 19px 0;
         line-height: 20px;
@@ -169,27 +188,12 @@
         display: none;
     }
 
-    .search__toggle_mini-size {
-        justify-content: center;
-        align-items: center;
-        margin: 0 0 0 0;
-        display: flex;
+    .search__border {
+        display: none;
     }
 
     .search__films {
         padding-right: 2px;
         font-size: 11px;
-    }
-
-    .search__border {
-        display: none;
-    }
-
-    .search__button {
-        margin-right: 20px;
-    }
-
-    .search__toggle {
-        display: none;
     }
 }

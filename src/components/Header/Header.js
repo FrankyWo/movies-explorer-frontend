@@ -1,10 +1,11 @@
+import React from 'react';
+import './Header.css'
+import Logo from "../Logo/Logo";
 import NavProfileBtn from "./NavProfileBtn/NavProfileBtn";
 import HeaderAuth from "./HeaderAuth/HeaderAuth";
 import Navigation from './Navigation/Navigation';
 import HeaderNav from "./HeaderNav/HeaderNav";
-import Logo from "./Logo/Logo";
-import React from 'react';
-import './Header.css'
+
 
 const Header = ({ auth }) => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -23,7 +24,7 @@ const Header = ({ auth }) => {
                 <Logo />
                 {auth && <HeaderNav onClick={handleClickOpen} />}
             </div>
-            {!auth ? <HeaderAuth /> : <NavProfileBtn isOpen={handleClickOpen} />}
+            {auth ? <NavProfileBtn isOpen={handleClickOpen} /> : <HeaderAuth />}
             <Navigation isOpen={isOpen} onClick={handleClickClose} />
         </header>
     );

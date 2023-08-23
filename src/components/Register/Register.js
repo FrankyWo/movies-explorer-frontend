@@ -1,19 +1,22 @@
-import Authorization from "../Authorization/Authorization";
 import React from "react";
+import { Navigate } from "react-router-dom";
+import Authorization from "../Authorization/Authorization";
 
-function Register() {
-    return (
-        <main>
+function Register(props) {
+    return (!props.auth
+        ? <main>
             <Authorization
-                authType="register"
-                title="Добро пожаловать!"
-                button="Зарегистрироваться"
-                text="Уже зарегистрированы?"
-                link="Войти"
-                linkRout="/signin"
                 name={["name", "email", "password"]}
+                text="Уже зарегистрированы?"
+                button="Зарегистрироваться"
+                title="Добро пожаловать!"
+                onLogin={props.onLogin}
+                authType="register"
+                linkRout="/signin"
+                link="Войти"
             />
         </main>
+        : <Navigate to="/movies" />
     );
 }
 

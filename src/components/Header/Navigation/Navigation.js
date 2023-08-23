@@ -1,8 +1,9 @@
+import React from "react";
+import "../NavProfileBtn/NavProfileBtn.css";
+import "./Navigation.css";
 import close from "../../../images/close.svg";
 import { Link, NavLink } from "react-router-dom";
-import "../NavProfileBtn/NavProfileBtn.css";
-import React from "react";
-import "./Navigation.css";
+
 
 function Navigation(props) {
     return (

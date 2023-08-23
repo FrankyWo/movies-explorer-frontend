@@ -15,7 +15,7 @@
     text-align: center;
     line-height: 58px;
     font-weight: 400;
-    margin: 0 auto 0;
+    margin: 0 auto;
     max-width: 850px;
     font-size: 50px;
     color: #fff;
@@ -48,7 +48,7 @@
 
 @media screen and (max-width: 480px) {
     .promo {
-        margin: 15px 14px 0 14px;
+        margin: 15px 14px 0;
         min-height: 586px;
         max-width: 480px;
     }
@@ -62,7 +62,7 @@
         padding-top: 219px;
         line-height: 37px;
         max-width: 290px;
-        margin: 0 auto 0;
+        margin: 0 auto;
         font-weight: 400;
         font-size: 29px;
     }

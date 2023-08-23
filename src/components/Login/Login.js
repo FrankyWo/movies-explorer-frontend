@@ -1,18 +1,21 @@
-import Authorization from "../Authorization/Authorization";
 import React from "react";
+import Authorization from "../Authorization/Authorization";
+import { Navigate } from "react-router-dom";
 
-function Login() {
-    return (
-        <main>
+function Login(props) {
+    return (!props.auth
+        ? <main>
             <Authorization
-                authType="login"
-                title="Рады видеть!"
-                button="Войти"
+                onLogin={props.onLogin}
                 text="Ещё не зарегистрированы?"
+                title="Рады видеть!"
                 link="Регистрация"
                 linkRout="/signup"
+                authType="login"
+                button="Войти"
             />
         </main>
+        : (<Navigate to="/movies" />)
     );
 }
 

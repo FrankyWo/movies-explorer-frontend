@@ -8,7 +8,7 @@
 .tech__title {
     border-bottom: #fff 1px solid;
     letter-spacing: -0.04em;
-    margin: 0 70px 0 70px;
+    margin: 0 70px;
     line-height: 27px;
     max-width: 1140px;
     padding-top: 99px;
@@ -48,8 +48,10 @@
 
 .tech__button {
     background-color: #303030;
-    letter-spacing: -0.04em;
+    color: #fff;
+    display: flex;
     justify-content: center;
+    letter-spacing: -0.04em;
     text-decoration: none;
     border-radius: 10px;
     align-items: center;
@@ -58,8 +60,6 @@
     font-size: 14px;
     min-width: 90px;
     cursor: pointer;
-    color: #fff;
-    display: flex;
     border: none;
     padding: 0;
     margin-right: 10px;
@@ -84,7 +84,7 @@
 
 @media screen and (max-width: 768px) {
     .tech__link {
-        margin: 0 10px 0 0;
+        margin: 0 10px 0;
     }
 }
 

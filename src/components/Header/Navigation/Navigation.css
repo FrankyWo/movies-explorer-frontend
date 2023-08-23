@@ -43,11 +43,6 @@
     top: 47px;
 }
 
-.navigation__close:hover {
-    transition: 1s ease-in;
-    opacity: 0.6;
-}
-
 .navigation__close-img {
     max-width: 30px;
 }

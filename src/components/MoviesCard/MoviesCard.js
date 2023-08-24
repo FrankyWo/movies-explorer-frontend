@@ -56,7 +56,7 @@ const MoviesCard = ({ card, flag, savedMovies, onSave, onDelete }) => {
                             {`${Math.floor(card.duration / 60)}ч ${card.duration % 60}м`}</p>
                     </div>
                     <button
-                        className={`movies-card__${flag} movies-card__${flag}_${saveMovie ? "active" : ""}`}
+                        className={`movies-card__${flag} movies-card__${flag}_${saveMovie ? "active" : ""} button` }
                         onClick={handleSaveMovie}
                         type="button"
                     ></button>

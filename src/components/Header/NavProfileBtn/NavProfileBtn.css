@@ -27,10 +27,6 @@
     color: #FFFFFF;
 }
 
-.nav-profile-btn__display_open {
-    margin-top: 593px;
-}
-
 .nav-profile-menu {
     background-image: url('./../../../../src/images/menu-button.svg');
     background-position: center;
@@ -53,12 +49,6 @@
 @media screen and (max-width: 768px) {
     .nav-profile-btn {
         display: none;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .nav-profile-btn__display_open {
-        margin-top: 415px;
     }
 }
 

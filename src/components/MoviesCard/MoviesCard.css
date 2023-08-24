@@ -69,12 +69,12 @@
 
 .movies-card__add-favorites-btn_active {
     background-image: url("../../images/add-favorites-btn_active.svg");
-    transition: .7;
+    
 }
 
 .movies-card__add-favorites-btn:hover {
-    background-image: url("../../images/movies-card__add-favorites-btn_active.svg");
-    transition: 1.5s;
+    background-image: url("../../images/add-favorites-btn_active.svg");
+    
 }
 
 .movies-card__image {

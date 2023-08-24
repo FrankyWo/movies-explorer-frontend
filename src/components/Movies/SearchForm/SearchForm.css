@@ -1,7 +1,7 @@
 .search {
     border-bottom: 1px solid #424242;
     padding: 70px 0 0;
-    margin: 0 70px 0;
+    margin: 0 70px;
 }
 
 .search__container {
@@ -32,8 +32,8 @@
 }
 
 .search__films {
-    padding-right: 30px;
-    margin: 0 0 0 15px;
+    padding-right: 30px;;
+    margin-left: 15px;
     line-height: 18px;
     font-weight: 400;
     font-size: 13px;
@@ -43,7 +43,8 @@
     border: none;
     color: #8B8B8B;
     background-color: #2F2F2F;
-    padding: 0 0 0 10px;
+    padding: 0;
+    padding-left: 10px;
     font-style: normal;
     line-height: 20px;
     font-weight: 400;
@@ -170,7 +171,7 @@
     .search__toggle_mini-size {
         justify-content: center;
         align-items: center;
-        margin: 0 0 0 0;
+        margin: 0;
         display: flex;
     }
 

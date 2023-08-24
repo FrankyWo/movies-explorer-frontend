@@ -1,5 +1,5 @@
-import search from "../../../images/search-form__search-button.svg";
-import searchBtn from "../../../images/search__button-btn.svg";
+import search from "../../../images/search-form__loop-icon.svg";
+import searchButton from "../../../images/search__button.svg";
 import React, { useEffect, useState } from "react";
 import "./SearchForm.css";
 
@@ -66,7 +66,7 @@ function SearchForm({ onCard, tag, onReset }) {
                         <img
                             className="search__search-image"
                             alt="поиск"
-                            src={searchBtn}
+                            src={searchButton}
                         />
                     </button>
                     <div className="search__border" />

@@ -55,7 +55,7 @@ function Navigation(props) {
                         </li>
                         <li className="navigation__link-container">
                             <Link
-                                className="nav-profile-btn nav-profile-btn-link nav-profile-btn__display_open link"
+                                className="nav-profile-btn-link nav-profile-btn__display_open link"
                                 to="/profile">
                                 Аккаунт
                             </Link>

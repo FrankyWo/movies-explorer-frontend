@@ -3,4 +3,4 @@
 [Сайт](https://github.com/FrankyWo/movies-explorer-frontend)
 
 
-123123123
+[Pull Requests](https://github.com/FrankyWo/movies-explorer-frontend/pull/2)

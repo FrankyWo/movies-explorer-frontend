@@ -1,4 +1,4 @@
-import {baseUrl} from "./constants";
+import { baseUrl } from "./constants";
 
 const checkResponse = (res) => {
     if (res.ok) {
@@ -8,26 +8,26 @@ const checkResponse = (res) => {
     }
 }
 
-export async function authorization({email, password}) {
+export async function authorization({ email, password }) {
     const data = await fetch(`${baseUrl}/signin`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({password, email}),
+        body: JSON.stringify({ password, email }),
     })
     return checkResponse(data);
 }
 
 
-export async function registration({email, password, name}) {
+export async function registration({ email, password, name }) {
     const data = await fetch(`${baseUrl}/signup`, {
         method: "POST",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({email, password, name}),
+        body: JSON.stringify({ email, password, name }),
     })
     return checkResponse(data);
 }

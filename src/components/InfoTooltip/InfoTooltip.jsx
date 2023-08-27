@@ -1,9 +1,9 @@
+import React from "react";
 import checkmarkIcon from "../../images/checkmark.svg"
 import crossIcon from "../../images/cross.svg";
-import "../InfoTooltip/InfoTooltip.css"
-import React from "react";
+import "./InfoTooltip.css"
 
-function InfoTooltip({isOpen, onClose, isSuccess, onMessage}) {
+function InfoTooltip({ isOpen, onClose, isSuccess, onMessage }) {
     const onCloseWindow = () => {
         onClose();
     }
@@ -14,7 +14,7 @@ function InfoTooltip({isOpen, onClose, isSuccess, onMessage}) {
                 : `popup`
         }>
             <div className=" popup__content popup_type_info-tooltip">
-                <button type="button" className="popup__close-button" onClick={onCloseWindow}/>
+                <button type="button" className="popup__close-button button" onClick={onCloseWindow} />
                 <img
                     src={
                         isSuccess

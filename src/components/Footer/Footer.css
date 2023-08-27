@@ -6,7 +6,7 @@
 }
 
 .footer__title {
-    border-bottom: #E8E8E8 2px solid;
+    border-bottom: #424242 1px solid;
     text-align: center;
     font-style: normal;
     padding: 0 0 20px;
@@ -14,7 +14,7 @@
     margin: 79px 0 0;
     font-weight: 400;
     font-size: 13px;
-    color: #a0a0a0;
+    color: #8B8B8B;
 }
 
 .footer__container {
@@ -22,18 +22,18 @@
     flex-direction: row;
     align-self: center;
     min-height: 56px;
-    margin: 0 auto 0;
+    margin: 0 auto;
     display: flex;
     padding: 0;
 }
 
 .footer__copy {
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
     font-style: normal;
     line-height: 16px;
     font-weight: 400;
     font-size: 13px;
-    color: #000000;
+    color: #fff;
     padding: 0;
 }
 
@@ -50,7 +50,7 @@
 
 .footer__link-item {
     text-decoration: none;
-    color: #000000;
+    color: #fff;
     padding: 0;
 }
 
@@ -67,13 +67,8 @@
     font-weight: 400;
     font-size: 13px;
     cursor: pointer;
-    color: #000000;
+    color: #fff;
     padding: 0;
-}
-
-.footer__link:hover {
-    transition: 1s ease-in;
-    opacity: 0.6;
 }
 
 .footer__link:last-of-type {

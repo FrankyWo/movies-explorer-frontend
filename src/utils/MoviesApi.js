@@ -1,4 +1,4 @@
-import { moviesUrl } from "./constants";
+import {moviesUrl} from "./constants";
 
 const checkResponse = (res) => {
     if (res.ok) return res.json();

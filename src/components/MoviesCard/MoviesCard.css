@@ -1,10 +1,8 @@
-.movies-card {
-    border-radius: 6px;
-    background: #222;
-    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+.movies-card__card {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
     justify-content: center;
     flex-direction: column;
-    min-width: 100%;
+    max-width: 100%;
     display: flex;
 }
 
@@ -12,7 +10,7 @@
     line-height: 18px;
     font-weight: 500;
     font-size: 15px;
-    color: #fff;
+    color: #000000;
     margin: 0;
 }
 
@@ -28,20 +26,21 @@
     flex-direction: column;
     text-decoration: none;
     display: flex;
+
 }
 
 .movies-card__info {
     justify-content: space-between;
-    margin: 0 14px;
+    margin: 0 14px 0 14px;
     align-items: center;
     min-height: 68px;
     display: flex;
 }
 
 .movies-card__delete-favorites-btn {
-    background-image: url("../../images/delete-favorites-btn.svg");
+    background-image: url("../../images/movies-card__delete-favorites-btn.svg");
     background-repeat: no-repeat;
-    background-color: #222;
+    background-color: #fff;
     min-height: 30px;
     min-width: 30px;
     cursor: pointer;
@@ -51,14 +50,14 @@
 }
 
 .movies-card__delete-favorites-btn:hover {
-    transition: .3;
-    opacity: .7;
+    transition: 1.5s;
+    opacity: 0.5;
 }
 
 .movies-card__add-favorites-btn {
-    background-image: url("../../images/add-favorites-btn.svg");
+    background-image: url("../../images/movies-card__add-favorites-btn.svg");
     background-repeat: no-repeat;
-    background-color: #222;
+    background-color: #FFFFFF;
     min-height: 30px;
     min-width: 30px;
     cursor: pointer;
@@ -68,19 +67,18 @@
 }
 
 .movies-card__add-favorites-btn_active {
-    background-image: url("../../images/add-favorites-btn_active.svg");
-    
+    background-image: url("../../images/movies-card__add-favorites-btn_active.svg");
 }
 
 .movies-card__add-favorites-btn:hover {
-    background-image: url("../../images/add-favorites-btn_active.svg");
-    
+    background-image: url("../../images/movies-card__add-favorites-btn_active.svg");
+    transition: 1.5s;
 }
 
 .movies-card__image {
     aspect-ratio: 16 / 9;
     object-fit: cover;
-} 
+}
 
 @media screen and (max-width: 768px) {
     .movies-card__card {

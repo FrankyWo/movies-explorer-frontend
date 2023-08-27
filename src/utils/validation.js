@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 
 const Forms = (onLogin) => {
     const [inactive, setInactive] = useState(null);
@@ -12,7 +12,7 @@ const Forms = (onLogin) => {
     }, []);
 
     const handleChange = (event) => {
-        const { name, value } = event.target;
+        const {name, value} = event.target;
         setValues({
             ...values,
             [name]: value,

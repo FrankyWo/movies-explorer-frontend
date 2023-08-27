@@ -1,5 +1,5 @@
-[Макет](https://disk.yandex.ru/d/P8zOCa68d6wnnQ)
+[Макет]
 
-[Сайт](https://frankywoo.movies.nomoredomains.sbs)
+[Сайт]
 
-[Pull Requests](https://github.com/FrankyWo/movies-explorer-frontend/pull/2)
+[Pull request]

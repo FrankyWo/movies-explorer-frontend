@@ -1,9 +1,8 @@
 .authorization {
-    margin: 0 auto;
+    margin: -1px auto 0 auto;
     max-width: 1280px;
     min-height: 266px;
-    color: #222222;
-    padding-top: 150px;
+    color: #000000;
 }
 
 .authorization__header {
@@ -30,11 +29,10 @@
     line-height: 29px;
     font-weight: 500;
     font-size: 24px;
-    color: #FFFFFF;
 }
 
 .authorization__container {
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     max-width: 396px;
     list-style: none;
     padding: 0;
@@ -49,8 +47,6 @@
 }
 
 .authorization__input {
-    background-color: #222;
-    color: #fff;
     margin-bottom: 10px;
     font-style: normal;
     line-height: 17px;
@@ -64,11 +60,11 @@
 }
 
 .authorization__part-form {
-    border-bottom: #424242 1px solid;
+    border-bottom: #E8E8E8 2px solid;
 }
 
 .authorization__part-form:has(input:focus) {
-    border-bottom: #4285F4 1px solid;
+    border-bottom: #FF6838 2px solid;
 }
 
 .authorization__validation-text {
@@ -76,7 +72,7 @@
     line-height: 12px;
     font-weight: 400;
     font-size: 10px;
-    color: #FF3055;
+    color:#FF3055;
 }
 
 .authorization__validation-text:last-of-type {
@@ -86,7 +82,7 @@
 .authorization__confirm {
     justify-content: flex-start;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     align-items: center;
     min-height: 217px;
     max-width: 1280px;
@@ -94,7 +90,7 @@
 }
 
 .authorization__confirm-button {
-    background-color: #4285F4;
+    background-color: #FF6838;
     padding-right: 125px;
     padding-left: 125px;
     text-align: center;
@@ -114,14 +110,19 @@
     margin-top: 203px;
 }
 
+.authorization__confirm-button:hover {
+    transition: 1s ease-in;
+    opacity: .6;
+}
+
 .authorization__confirm-button_disable {
-    background: #312f2f;
-    color: #ece1e1;
+    background: #F8F8F8;
+    color: #C2C2C2;
     cursor: auto;
 }
 
 .authorization__confirm-container {
-    margin: 16px auto 70px;
+    margin: 16px auto 70px auto;
     justify-content: flex-start;
     flex-direction: row;
     min-height: 17px;
@@ -138,18 +139,22 @@
 
 .authorization__confirm-link {
     text-decoration: none;
-    margin-left: 6px;
+    margin: 0 0 0 6px;
     line-height: 17px;
     font-weight: 400;
     font-size: 14px;
     cursor: pointer;
-    color: #4285F4;
+    color: #FF6838;
+}
+
+.authorization__confirm-link:hover {
+    transition: 1s ease-in;
+    opacity: .6;
 }
 
 @media screen and (max-width: 768px) {
     .authorization {
         max-width: 768px;
-        padding: 0;
     }
 }
 
@@ -182,7 +187,6 @@
     .authorization__confirm-button {
         margin-top: 133px;
     }
-
     .authorization__confirm-button-login {
         margin-top: 202px;
     }
@@ -231,7 +235,6 @@
         min-width: 260px;
         font-size: 12px;
     }
-
     .authorization__confirm-button-login {
         margin-top: 292px;
     }
@@ -239,7 +242,7 @@
 
 @media screen and (max-width: 480px) {
     .authorization__confirm-container {
-        margin: 14px auto 30px;
+        margin: 14px auto 30px auto;
     }
 }
 

@@ -1,5 +1,5 @@
 .promo {
-    background-color: #272727;
+    background-color: #F5F5F5;
     margin: 18px 40px 0 40px;
     border-radius: 10px;
     align-self: center;
@@ -15,10 +15,10 @@
     text-align: center;
     line-height: 58px;
     font-weight: 400;
-    margin: 0 auto;
+    margin: 0 auto 0;
     max-width: 850px;
     font-size: 50px;
-    color: #fff;
+    color: #000000;
 }
 
 @media screen and (min-width: 1281px) {
@@ -48,7 +48,7 @@
 
 @media screen and (max-width: 480px) {
     .promo {
-        margin: 15px 14px 0;
+        margin: 15px 14px 0 14px;
         min-height: 586px;
         max-width: 480px;
     }
@@ -62,7 +62,7 @@
         padding-top: 219px;
         line-height: 37px;
         max-width: 290px;
-        margin: 0 auto;
+        margin: 0 auto 0;
         font-weight: 400;
         font-size: 29px;
     }

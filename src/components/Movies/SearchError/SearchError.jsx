@@ -1,5 +1,5 @@
-import React from "react";
 import "./SearchError.css";
+import React from "react";
 
 function SearchError() {
     return (

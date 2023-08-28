@@ -3,7 +3,6 @@ export const baseUrl = "https://api.frankywoo.movies.nomoredomains.sbs";
 export const moviesUrl = "https://api.nomoreparties.co/beatfilm-movies";
 export const moviesApi = "https://api.nomoreparties.co";
 
-
 export const MAX_WINDOW_SIZE_1280 = 1088;
 export const MAX_MOVIES_STEP_1280 = 3;
 export const MAX_MOVIES_1280 = 12;

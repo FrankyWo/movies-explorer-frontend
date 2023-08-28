@@ -31,13 +31,3 @@ export async function registration({ email, password, name }) {
     })
     return checkResponse(data);
 }
-
-export const getContent = (token) => {
-    return fetch(`https://auth.nomoreparties.co/users/me`, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`
-        },
-    }).then(checkResponse);
-}

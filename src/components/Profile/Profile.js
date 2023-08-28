@@ -1,24 +1,34 @@
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import React, { useContext, useEffect, useState } from "react";
+import * as Yup from 'yup';
 import Forms from "../../utils/validation";
 import "./Profile.css";
 
 function Profile(props) {
-    const { values, errors, handleChange, handleSubmit } = Forms(props.updateUser);
+    const { values, errors, handleChange, handleSubmit, setValues } = Forms(props.updateUser);
     const [currentUserEdit, setCurrentUserEdit] = useState(false);
     const currentUser = useContext(CurrentUserContext);
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
     useEffect(() => {
         setName(currentUser.name);
         setEmail(currentUser.email);
-    }, [currentUser]);
+        setValues({ name: currentUser.name, email: currentUser.email }); // Обновляем начальные значения
+
+        setIsButtonDisabled(true); // Кнопка по умолчанию блокирована
+    }, [currentUser, setValues]);
 
     useEffect(() => {
-        if ((values.name !== undefined || values.email !== undefined)) setCurrentUserEdit(true);
-        else setCurrentUserEdit(false);
-    }, [currentUser, name, email, values.name, values.email]);
+        const hasNameChanged = values.name !== name;
+        const hasEmailChanged = values.email !== email;
+
+        setCurrentUserEdit(hasNameChanged || hasEmailChanged);
+
+        // Обновляем состояние блокировки кнопки на основе изменений в данных
+        setIsButtonDisabled(!(hasNameChanged || hasEmailChanged));
+    }, [values, name, email]);
 
     return (
         <main>
@@ -27,7 +37,8 @@ function Profile(props) {
                 <form
                     name="user-data"
                     className="profile__form form"
-                    onSubmit={handleSubmit}>
+                    onSubmit={handleSubmit}
+                >
                     <label className="profile__label" htmlFor="name">
                         <span className="profile__subtitle">Имя</span>
                         <input
@@ -55,14 +66,10 @@ function Profile(props) {
                         />
                     </label>
                     <button
-                        className={`profile__btn profile__btn_type_edit button ${(errors.email
-                            || errors.name
-                            || values.email === email
-                            || values.name === name
-                            || !currentUserEdit)
-                            && "profile__btn_disable"
-                            }`}
-                        type="submit">
+                        className={`profile__btn profile__btn_type_edit ${isButtonDisabled && "profile__btn_disable"}`}
+                        type="submit"
+                        disabled={isButtonDisabled}
+                    >
                         Редактировать
                     </button>
                 </form>

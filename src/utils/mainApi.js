@@ -52,7 +52,6 @@ export async function saveMovie({
     trailerLink,
     id
 }) {
-
     const data = await fetch(`${baseUrl}/movies`, {
         method: "POST",
         headers: {

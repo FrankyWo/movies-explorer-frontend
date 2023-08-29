@@ -35,6 +35,7 @@ const SavedMovies = ({ savedMovies, onSave, onDelete }) => {
         movies.splice(movies.findIndex((a) => a._id === card), 1);
         setNewSavedMovies(savedMoviesNew);
     }
+    
 
     const handleSearchCards = async (line, checkbox) => {
         try {

@@ -1,15 +1,12 @@
-import Preloader from "./Preloader/Preloader";
-import React, { useEffect, useState } from "react";
-import "./Movies.css";
-
 import SearchErrorServer from "./SearchErrorServer/SearchErrorServer";
-import SearchForm from "./SearchForm/SearchForm";
-import SearchError from "./SearchError/SearchError";
-import { searchCards } from "../../utils/searchMovies";
-
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import { searchCards } from "../../utils/searchMovies";
+import SearchError from "./SearchError/SearchError";
 import * as moviesApi from "../../utils/MoviesApi";
-
+import React, { useEffect, useState } from "react";
+import SearchForm from "./SearchForm/SearchForm";
+import Preloader from "./Preloader/Preloader";
+import "./Movies.css";
 
 const Movies = (props) => {
     const [requestError, setRequestError] = useState(false);
@@ -44,6 +41,7 @@ const Movies = (props) => {
         const findMovies = JSON.parse(localStorage.getItem("findMovies"));
         if (findMovies) setMovies(findMovies);
     }, []);
+
 
     return (
         <main className="content">

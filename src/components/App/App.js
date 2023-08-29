@@ -45,6 +45,26 @@ function App() {
         }
     };
 
+    const handleSaveMovies = async (data) => {
+        try {
+            await api.saveMovie(data);
+            await handleSaveMovie();
+        } catch (e) {
+            console.warn(e);
+            return e;
+        }
+    };
+
+    const handleDeleteMovies = async (data) => {
+        try {
+            await api.deleteMovies(data);
+            await handleSaveMovie();
+        } catch (e) {
+            console.warn(e);
+            return e;
+        }
+    };
+
     const handleTokenCheck = async () => {
         const jwt = localStorage.getItem("jwt");
         if (!jwt) {
@@ -60,26 +80,6 @@ function App() {
         } catch (e) {
             console.warn(e);
             setRender(true);
-        }
-    };
-
-    const handleSaveMovies = async (data) => {
-        try {
-            console.log(await api.saveMovie(data));
-            await handleSaveMovie();
-        } catch (e) {
-            console.warn(e);
-            return e;
-        }
-    };
-
-    const handleDeleteMovies = async (data) => {
-        try {
-            console.log(await api.deleteMovies(data));
-            await handleSaveMovie();
-        } catch (e) {
-            console.warn(e);
-            return e;
         }
     };
 

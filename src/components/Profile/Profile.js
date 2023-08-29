@@ -11,6 +11,7 @@ function Profile(props) {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    
 
     useEffect(() => {
         setName(currentUser.name);

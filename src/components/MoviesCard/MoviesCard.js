@@ -33,9 +33,7 @@ const MoviesCard = ({ card, flag, savedMovies, onSave, onDelete }) => {
         try {
             if (card._id) {
                 const answer = await onDelete(card._id);
-
                 if (answer) return
-
                 return setSaveMovie(false);
             }
             const result = await onDelete(saveMovieId);
@@ -56,7 +54,7 @@ const MoviesCard = ({ card, flag, savedMovies, onSave, onDelete }) => {
                             {`${Math.floor(card.duration / 60)}ч ${card.duration % 60}м`}</p>
                     </div>
                     <button
-                        className={`movies-card__${flag} movies-card__${flag}_${saveMovie ? "active" : ""} button` }
+                        className={`movies-card__${flag} movies-card__${flag}_${saveMovie ? "active" : ""} button`}
                         onClick={handleSaveMovie}
                         type="button"
                     ></button>

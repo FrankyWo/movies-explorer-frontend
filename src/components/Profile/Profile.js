@@ -20,6 +20,8 @@ function Profile(props) {
         setIsButtonDisabled(!isFormValid || !hasChanges);
     }, [values, errors, currentUser]);
 
+
+
     return (
         <main>
             <section className="profile">
@@ -53,6 +55,7 @@ function Profile(props) {
                             type="email"
                             name="email"
                             required
+                            pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$"
                         />
                     </label>
                     <button

@@ -1,5 +1,5 @@
 export const baseUrl = "https://api.frankywoo.movies.nomoredomains.sbs";
-// export const baseUrl = "http://localhost:3000";
+//export const baseUrl = "http://localhost:3000";
 export const moviesUrl = "https://api.nomoreparties.co/beatfilm-movies";
 export const moviesApi = "https://api.nomoreparties.co";
 

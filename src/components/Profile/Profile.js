@@ -1,35 +1,24 @@
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import React, { useContext, useEffect, useState } from "react";
-import * as Yup from 'yup';
 import Forms from "../../utils/validation";
 import "./Profile.css";
 
 function Profile(props) {
     const { values, errors, handleChange, handleSubmit, setValues } = Forms(props.updateUser);
-    const [currentUserEdit, setCurrentUserEdit] = useState(false);
     const currentUser = useContext(CurrentUserContext);
-    const [email, setEmail] = useState("");
-    const [name, setName] = useState("");
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-    
 
     useEffect(() => {
-        setName(currentUser.name);
-        setEmail(currentUser.email);
-        setValues({ name: currentUser.name, email: currentUser.email }); // Обновляем начальные значения
-
-        setIsButtonDisabled(true); // Кнопка по умолчанию блокирована
+        setValues({ name: currentUser.name, email: currentUser.email });
+        setIsButtonDisabled(true);
     }, [currentUser, setValues]);
 
     useEffect(() => {
-        const hasNameChanged = values.name !== name;
-        const hasEmailChanged = values.email !== email;
+        const hasChanges = values.name !== currentUser.name || values.email !== currentUser.email;
+        const isFormValid = Object.values(errors).every(error => error === "");
 
-        setCurrentUserEdit(hasNameChanged || hasEmailChanged);
-
-        // Обновляем состояние блокировки кнопки на основе изменений в данных
-        setIsButtonDisabled(!(hasNameChanged || hasEmailChanged));
-    }, [values, name, email]);
+        setIsButtonDisabled(!isFormValid || !hasChanges);
+    }, [values, errors, currentUser]);
 
     return (
         <main>
@@ -43,7 +32,7 @@ function Profile(props) {
                     <label className="profile__label" htmlFor="name">
                         <span className="profile__subtitle">Имя</span>
                         <input
-                            defaultValue={values.name || name}
+                            defaultValue={values.name}
                             className="profile__input"
                             onChange={handleChange}
                             placeholder="Имя"
@@ -58,7 +47,7 @@ function Profile(props) {
                         <span className="profile__subtitle profile__subtitle_bottom">E-mail</span>
                         <input
                             className="profile__input profile__input_bottom"
-                            defaultValue={values.email || email}
+                            defaultValue={values.email}
                             onChange={handleChange}
                             placeholder="E-mail"
                             type="email"

@@ -1,42 +1,21 @@
-import React from "react";
-import checkmarkIcon from "../../images/checkmark.svg"
-import crossIcon from "../../images/cross.svg";
-import "./InfoTooltip.css"
+import './InfoTooltip.css'
+import { Popup } from '../';
 
-function InfoTooltip({ isOpen, onClose, isSuccess, onMessage }) {
-    const onCloseWindow = () => {
-        onClose();
-    }
+function InfoTooltip({ isOpen, isSuccess = false, info, onClose }) {
+    const content = isSuccess ? 'success' : 'error';
+
+    const title = isSuccess ? '' : 'Кажется, что-то пошло не так...';
+
     return (
-        <div className={
-            isOpen
-                ? `popup popup_opened`
-                : `popup`
-        }>
-            <div className=" popup__content popup_type_info-tooltip">
-                <button type="button" className="popup__close-button button" onClick={onCloseWindow} />
-                <img
-                    src={
-                        isSuccess
-                            ? checkmarkIcon
-                            : crossIcon
-                    }
-                    alt={
-                        isSuccess
-                            ? 'Регистрация прошла успешно'
-                            : 'В ходе регистрации произошла ошибка'
-                    }
-                    className="popup__info-tooltip-icon"
-                />
-                <h3 className="popup__info-tooltip-title">
-                    {isSuccess
-                        ? `${onMessage}`
-                        : `${onMessage}`
-                    }
-                </h3>
-            </div>
-        </div>
+        <Popup
+            name='notification'
+            isOpen={isOpen}
+            onClose={onClose}
+            containerClass={`popup__container infotooltip infotooltip_content_${content}`}>
+            <h2 className='popup__title infotooltip__title'>{title}</h2>
+            <p className='infotooltip__subtitle'>{info}</p>
+        </Popup>
     );
 }
 
-export default InfoTooltip;
+export { InfoTooltip };

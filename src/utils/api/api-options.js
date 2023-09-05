@@ -1,6 +1,6 @@
 const mainApiOptions = {
-  //baseURL: 'https://api.frankywoo.movies.nomoredomains.sbs',
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://api.frankywoo.movies.nomoredomains.sbs',
+  //baseURL: 'http://localhost:3000',
   errorMessages: {
     getUser: 'Не удалось загрузить данные пользователя',
     updateUser: 'Не удалось обновить данные пользователя',

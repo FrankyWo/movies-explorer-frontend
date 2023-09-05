@@ -2,4 +2,4 @@
 
 [Сайт](https://frankywoo.movies.nomoredomains.sbs)
 
-[Pull Requests](https://github.com/FrankyWo/movies-explorer-frontend/pull/2)
+[Pull Requests](https://github.com/FrankyWo/movies-explorer-frontend/pull/2);

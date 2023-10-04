@@ -1,55 +1,26 @@
-.scroll-movies-btn {
-    margin: 0 auto 80px auto;
-    justify-content: center;
-    max-width: 1280px;
-    min-height: 50px;
-    display: flex;
-}
-
-.scroll-movies-btn_none {
-    margin: 0 auto 90px auto;
-}
-
-.scroll-movies-btn__button {
-    border: #424242 1px solid;
+.ScrollMoviesBtn {
     min-width: 320px;
     min-height: 36px;
     border-radius: 6px;
-    height: 36px;
-    background: #202020;
-    color: #FFF;
-    font-size: 12px;
-    line-height: normal;
-    margin: 50px 0 95px;
-    cursor: pointer;
+    margin: 0 auto;
+    font-size: var(--text-xxs);
+    line-height: 1.25;
+    font-weight: var(--text-weight-m);
+    border: var(--color-gray-2) 1px solid;
+    color: var(--color-text-primary);
+    background: var(--color-very-dark-gray-3);
 }
 
-.scroll-movies-btn__button-none {
-    display: none;
+.ScrollMoviesBtn:hover {
+    box-shadow: 0 0 11px var(--color-black-rgba-30);
 }
 
-@media screen and (max-width: 768px) {
-    .scroll-movies-btn_none {
-        margin: 0 auto 120px auto;
-    }
+.ScrollMoviesBtn:active {
+    opacity: 0.7;
 }
 
-@media screen and (max-width: 768px) {
-    .scroll-movies-btn__button {
-        margin-top: 80px;
-        margin-bottom: 0;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .scroll-movies-btn__button {
-        margin-bottom: 40px;
+@media screen and (max-width: 370px) {
+    .ScrollMoviesBtn {
         min-width: 240px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .scroll-movies-btn_none {
-        margin: 0 auto 162px auto;
     }
 }
